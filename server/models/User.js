@@ -17,7 +17,7 @@ const UserSchema = new mongoose.Schema(
         email: {
             type: String,
             required: true,
-            max: 50,
+            max: 100,
             unique: true,
         },
         password: {
@@ -43,3 +43,5 @@ const UserSchema = new mongoose.Schema(
 );
 
 const User = mongoose.model("User", UserSchema); 
+
+export default User;

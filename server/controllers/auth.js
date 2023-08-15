@@ -14,7 +14,7 @@ export const register = async(req, res) =>{
             friends,
             location,
             occuptation
-        } = req.body;
+        } = req.body;   //Recieving User details in JSON Fromat from request Body
 
         const salt = await bcrypt.genSalt();    //Generate Salt using Bcrypt
         const passwordHash = await bcrypt.hash(password, salt);     //Generate a hash for the password with salt
