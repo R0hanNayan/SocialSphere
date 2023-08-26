@@ -1,47 +1,45 @@
 import mongoose from "mongoose";
 
 const UserSchema = new mongoose.Schema(
-    {
-        firstName: {
-            type: String,
-            required: true,
-            min: 2,
-            max: 50,
-        },
-        lastName: {
-            type: String,
-            required: true,
-            min: 2,
-            max: 50,
-        },
-        email: {
-            type: String,
-            required: true,
-            max: 100,
-            unique: true,
-        },
-        password: {
-            type: String,
-            required: true,
-            min: 5,
-            max: 50,
-        },
-        picturePath: {
-            type: String,
-            default: "",
-        },
-        friends: {
-            type: Array,
-            default: [],
-        },
-        location: String,
-        occupation: String,
-        viewedProfile: Number,
-        impressions: Number,
+  {
+    firstName: {
+      type: String,
+      required: true,
+      min: 2,
+      max: 50,
     },
-    { timestamps: true }    //To record the time of creation of objects
+    lastName: {
+      type: String,
+      required: true,
+      min: 2,
+      max: 50,
+    },
+    email: {
+      type: String,
+      required: true,
+      max: 50,
+      unique: true,
+    },
+    password: {
+      type: String,
+      required: true,
+      min: 5,
+    },
+    picturePath: {
+      type: String,
+      default: "",
+    },
+    friends: {
+      type: Array,
+      default: [],
+    },
+    location: String,
+    occupation: String,
+    viewedProfile: Number,
+    impressions: Number,
+  },
+  { timestamps: true }
 );
 
-const User = mongoose.model("User", UserSchema); 
-
+const User = mongoose.model("User", UserSchema);
 export default User;
