@@ -8,7 +8,7 @@ const UserImage = ({ image, size = "60px"}) => {
                 width={size}
                 height={size}
                 alt="user"
-                src={`{https://socialsphere-d2h0.onrender.com"}/assets/${image}`}
+                src={`{https://socialsphere-d2h0.onrender.com"}/public/assets/${image}`}
             />
         </Box>
     )
